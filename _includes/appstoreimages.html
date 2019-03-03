@@ -35,7 +35,6 @@ $(function() {
             var $headerName = $(".headerName");
             if ($.trim($($appName).text()).length == 0) {
                 $($appName).html(appInfo.trackName);
-                $($headerName).html(appInfo.trackName);
             }
 
             // Set price using the iOS app ID if it is not set manually in _config.yml
@@ -53,7 +52,7 @@ $(function() {
             console.info(appInfo);
 
         }
-    });  
+    });
 });
 
 </script>
