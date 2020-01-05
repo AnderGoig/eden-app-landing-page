@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-us">
-{% include head.html %}
-<body>
-  {{ content }}
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_blank">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.app_description }}">
+
+    <link rel="shortcut icon" href="{{ site.app_icon }}">
+
+    <!-- Smart App Banner -->
+    {% if site.enable_smart_app_banner %}
+    <meta name="apple-itunes-app" content="app-id={{ site.ios_app_id }}">
+    {% endif %}
+
+    <link rel="stylesheet" href="../css/github-markdown.css">
+  </head>
+
+  <body class="markdown-body">
+    {{ content }}
+  </body>
 </html>
