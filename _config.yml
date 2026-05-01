@@ -1,17 +1,20 @@
 # Page Info
-title                                     : Eden
+page_title                                : Eden                                      # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
 
 
 
 # App Info
 ios_app_id                                : 1336038164                                # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
+ios_app_country                           : us                                        # Required outside USA. Enter 2 letter country code as in https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 
 appstore_link                             :                                           # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
 playstore_link                            :                                           # Enter Google Play Store URL.
 support_link                              :                                           # Enter a support link.
+presskit_download_link                    :                                           # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file).
+                                                                                      # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
 
 app_icon                                  : # assets/appicon.png                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
-app_name                                  :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
+app_name                                  : Eden                                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_price                                 :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_description                           : A suitable, earnings and sales tracker for Envato Market authors.
 
@@ -24,11 +27,14 @@ your_name                                 : Ander Goig
 your_link                                 : https://github.com/AnderGoig
 your_city                                 : Madrid
 email_address                             : support@eden-app.com
+linkedin_username                         :
+linkedin_company                          :
 facebook_username                         :
 instagram_username                        :
 twitter_username                          :
 github_username                           :
 youtube_username                          :
+mastodon_link                             :
 
 
 
@@ -120,3 +126,14 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Markdown rendering
+markdown: kramdown
